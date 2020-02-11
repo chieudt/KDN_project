@@ -1,18 +1,18 @@
 *** Settings ***
 Resource          ../../Keywords/KM/api/sortProduct.robot
 
-*** Test Cases ***    URI
-minPrice              [Template]                               minPrice
-                      /api/v1/products?sort_price=1
+*** Test Cases ***    price 1
+minPrice              [Template]                       minPrice
+                      6000
 
-maxPrice              [Template]                               maxPrice
-                      api/v1/products?sort_price=0
+maxPrice              [Template]                       maxPrice
+                      20000
 
-newProduct            [Template]                               newProduct
-                      /api/v1/products?sort_new=true
+newProduct            [Template]                       newProduct
+                      15
 
-bestSaleProduct       [Template]                               bestSaleProduct
-                      /api/v1/products?sort_sold_count=true
+bestSaleProduct       [Template]                       bestSaleProduct
+                      5
 
-listingProduct        [Template]                               listingProduct
+listingProduct        [Template]                       listingProduct
                       /api/v1/products?page_size=10
